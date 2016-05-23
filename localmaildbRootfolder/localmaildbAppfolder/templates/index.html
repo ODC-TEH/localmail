@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="container" id="container-index">
+	
+	<div class="jumbotron" id="jumbotron-index">
+	    <h1>Local Mail Database</h1>
+	    <p>Please click on Incoming/Outgoing...</p>
+	</div>
+	
+	<div class="btn-group btn-group-justified">
+		  <a href="{{url_for('insertIncoming')}}" class="btn btn-primary">Incoming</a>
+		  <a href="{{url_for('insertOutgoing')}}" class="btn btn-success">Outgoing</a>
+	</div>
+
+</div>
+
+{% endblock %}

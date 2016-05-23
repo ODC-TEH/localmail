@@ -1,0 +1,77 @@
+img, embed,
+object, video {
+	max-width: 100%;
+}
+
+nav a, button {
+	min-height: 48px;
+	min-width: 48px;
+}
+
+body {
+	color: black;
+}
+
+#jumbotron-index{
+  margin-top:30px;
+  background-color:#378d99;
+}
+
+#container-index{
+	margin-top:30px;
+  background-color:#FFF;
+  color:#FFF;
+}
+
+#container-search{
+  background-color:#CCC;
+  margin-top:30px;
+}
+
+#container-outgoing{
+  background-color:#b9d198;
+  margin-top:30px;
+}
+
+#panel-heading-outgoing{
+  background-color:#b9d198;
+}
+
+#container-incoming{
+  background-color:#ADD8E6;
+  margin-top:30px;
+}
+
+#panel-heading-incoming{
+  background-color:#ADD8E6;
+}
+
+#top_extra{
+  height:20px
+}
+
+#navbar-incoming{
+  background-color:#337AB7;
+}
+
+#navbar-outgoing{
+  background-color:#5CB85C;
+}
+
+#navbar-brand{
+  color:white;
+}
+
+#navbar-link{
+  color:white;
+}
+
+#well-search{
+  margin-right:0px;
+  margin-left:0px;
+}
+
+#form-control-search{
+  margin-top:5px;
+  margin-bottom:5px;
+}

@@ -1,0 +1,72 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="container" id="container-outgoing">
+
+	<div class="row" id="top_extra"></div>
+	<nav class="navbar navbar-default" id="navbar-outgoing">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" id="navbar-brand">Outgoing letter details:</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li><a id="navbar-link" href="{{url_for('insertOutgoing')}}"><span class="glyphicon glyphicon-plus"></span> Insert</a></li>
+	      <li><a id="navbar-link" href="{{url_for('queryOutgoing')}}"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a id="navbar-link" href="{{url_for('chooseIncomingOutgoing')}}"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="panel panel-default" id="menuPanel">
+		<div class="panel-heading" id="panel-heading-outgoing">
+	    	{% with messages = get_flashed_messages() %}
+		    {% if messages %}
+		    <div class="alert alert-success fade in">
+		    	<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		      	{% for message in messages %}
+		  			<strong>{{ message }}</strong>
+		  		{% endfor %}
+		  	</div>
+	        {% endif %}
+    		{% endwith %}
+	    </div>
+		<div class="panel-body">
+			<form class="form-inline-block" action="{{url_for('insertOutgoing')}}" method = "POST" enctype = "multipart/form-data">
+				<div class="row">
+				    <div class="form-group col-md-12">
+				        <div class="input-group"> <span class="input-group-addon">Date:</span>
+				        	<input class="form-control" placeholder="Plaese enter a date" name="date" type="text" id="datepicker" required>
+				        </div>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="form-group col-md-12">
+				        <div class="input-group"> <span class="input-group-addon">To:</span>
+				        	<input class="form-control" placeholder="..." name="to_email" type="text" required>
+				        </div>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="form-group col-md-12">
+				        <div class="input-group"> <span class="input-group-addon">Subject:</span>
+				        	<input class="form-control" placeholder="..." name="subject" type="text" required>
+				        </div>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="form-group col-md-12">
+				       <input type = "file" name = "file" required/>
+				    </div>
+				</div>
+		</div>
+		<div class="panel-footer">
+			<button type="submit" class="btn btn-success btn-block" >Submit</button>
+		</div>
+			</form>
+	</div>
+
+</div>
+
+{% endblock %}
