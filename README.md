@@ -28,7 +28,7 @@ Created a new database and a new user with access to said database with followin
 ```sh
 CREATE DATABASE catalogdb;
 CREATE USER catuser;
-ALTER ROLE catalog WITH PASSWORD 'catpassword';
+ALTER ROLE catuser WITH PASSWORD 'catpassword';
 GRANT ALL PRIVILEGES ON DATABASE catalogdb TO catuser;
 ```
 Clone or copy *localmail* and *cd* into it; Copy *localmaildbRootfolder* to your *www* root:
