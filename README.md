@@ -35,9 +35,9 @@ Clone or copy *localmail* and *cd* into it; Copy *localmaildbRootfolder* to your
 ```sh
 sudo cp -r localmaildbRootfolder /var/www/
 ```
-Copy *localmaildb.conf* file to */etc/apache2/available-sites/* and enable it:
+Copy *localmaildb.conf* file to */etc/apache2/sites-available/* and enable it:
 ```sh
-sudo cp localmaildbRootfolder/localmaildb.conf /etc/apache2/available-sites/
+sudo cp localmaildbRootfolder/localmaildb.conf /etc/apache2/sites-available/
 sudo a2ensite localmaildb
 ```
 Create *data* folder in */var/www/* for users to upload their corresponding documents and give owenership to apache2's user *www-data*:
